@@ -4,10 +4,11 @@ kind: Kustomization
 resources:
   - namespace.yaml
 
-  # OTel Collector — receives all telemetry from services
-  - otel-collector/configmap.yaml
-  - otel-collector/deployment.yaml
-  - otel-collector/service.yaml
+  # Grafana Alloy — DaemonSet that collects logs + traces + metrics
+  - alloy/serviceaccount.yaml
+  - alloy/configmap.yaml
+  - alloy/daemonset.yaml
+  - alloy/service.yaml
 
   # Loki — log storage
   - loki/configmap.yaml

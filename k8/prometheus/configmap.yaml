@@ -17,9 +17,9 @@ data:
         static_configs:
           - targets: ['localhost:9090']
 
-      - job_name: 'otel-collector'
+      - job_name: 'alloy'
         static_configs:
-          - targets: ['otel-collector.observability.svc.cluster.local:8888']
+          - targets: ['alloy.observability.svc.cluster.local:12345']
 
       - job_name: 'spring-services'
         metrics_path: /actuator/prometheus
