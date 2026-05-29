@@ -27,6 +27,7 @@ resources:
   # Grafana — dashboard UI
   - grafana/configmap-datasources.yaml
   - grafana/configmap-dashboards.yaml
+  - grafana/configmap-dashboard-json.yaml
   - grafana/deployment.yaml
   - grafana/service.yaml
 
